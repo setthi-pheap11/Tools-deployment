@@ -1,5 +1,5 @@
 git clone :
-install python3
+\n install python3
 python3 -m venv ~/deploy_bot_venv
 source ~/deploy_bot_venv/bin/activate
 pip install --upgrade pip
