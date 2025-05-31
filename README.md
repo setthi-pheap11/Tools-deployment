@@ -1,3 +1,32 @@
+1.cd /usr/local/bin/
+<br />
+2.nano deploy_scholarar.sh
+```
+#!/bin/bash
+
+ENV=$1   # dev or staging
+BRANCH=$2
+
+if [ "$ENV" == "dev" ]; then
+  DIR="/var/www/scholarar"
+elif [ "$ENV" == "staging" ]; then
+  DIR="/var/www/scholarar-staging"
+else
+  echo "Invalid environment"
+  exit 1
+fi
+
+cd $DIR || exit 1
+sudo -i
+git fetch origin
+git checkout $BRANCH
+git pull origin $BRANCH
+# Add more deploy steps here if you want (npm install, composer install, etc.)
+
+echo "Deploy complete on $ENV with branch $BRANCH"
+
+```
+
 git clone :
 <br />
 install python3
