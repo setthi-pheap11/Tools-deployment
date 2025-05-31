@@ -1,11 +1,18 @@
 git clone :
-\n install python3
+<br />
+install python3
+<br />
 python3 -m venv ~/deploy_bot_venv
+<br />
 source ~/deploy_bot_venv/bin/activate
+<br />
 pip install --upgrade pip
+<br />
 pip install python-telegram-bot paramiko
+<br />
 
  Systemd config :
+ <br />
   nano /etc/systemd/system/deploybot.service
 ```
 [Unit]
@@ -24,7 +31,12 @@ Environment=PYTHONUNBUFFERED=1
 WantedBy=multi-user.target
 ```
 #service systemd
+<br />
 sudo systemctl restart deploybot.service
+<br />
  sudo systemctl daemon-reload
+ <br />
  sudo systemctl start deploybot.service
+ <br />
  sudo systemctl enable deploybot.service 
+
