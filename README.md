@@ -87,7 +87,7 @@ from telegram.ext import (
 CHOOSING_ENV = 0  # Only one step now
 
 # SSH config
-SSH_HOST = '128.199.91.247'
+SSH_HOST = 'ip server'
 SSH_USER = 'root'
 SSH_KEY_PATH = os.path.expanduser('~/.ssh/id_rsa_bot')  # private key path
 
